@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+<link rel="stylesheet" type="text/css" href="stylelog.css">
+</head>
+<body>
+	<div class="loginpage"><marquee behavior="alternate" style="height: 80px;width: 500px; color:#008b8b ;top: 80%"><b><h2>Welcome To Login Form</h2></b></marquee>
+		<div class="form" style="background-color: transparent;">
+			<form action="indexAfterLogin.html"  class="registerform" onsubmit="return valid()">
+				
+				<input type="text" id="username" placeholder="User Name"/>
+				
+				<input type="password" min="6" max="15" id ="pass" placeholder="Password"><input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" placeholder="Email">
+				<div ><input style="cursor: pointer; transition: 0.6s ease;padding: 10px 20px;border:0px solid;background-color:green;text-decoration: none;color: white" type="submit" name="submit"  onclick="valid()"></div>
+			</form>
+		</div>
+	</div>
+<script type="text/javascript">
+	function valid(){
+		if(document.getElementById('username').value==""){
+			alert("Please fill name");
+			return false;
+			
+		}
+		if (document.getElementById('pass').value=="") {
+			alert("Please fill password");
+			return false;
+			
+		}
+		if(document.getElementById('email').value==null){
+			alert("Please fill email address");
+			return false;
+		}
+	}
+</script>
+
+</body>
+</html>
